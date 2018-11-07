@@ -1,0 +1,220 @@
+\setupinteraction[state=start,
+	title={Evgeniy N. Sharapov},
+	subtitle={R\'esum\'e},
+	author={Evgeniy N. Sharapov},
+	keyword={resume},
+	% disable coloring of the links
+	color=,
+	style=\tf]
+
+%%%%%%%%%%    Layout
+\setuppapersize[letter][letter]
+\setuplayout[
+  topspace=0cm,
+  top=0cm,
+  backspace=1cm,
+  margin=1cm,
+  rightedge=0cm,
+  rightmargin=0.5cm,
+  width=fit,
+  height=fit,
+  header=0.5cm,
+  footer=0.5cm,
+]
+%%%%%%%%%%  No page numbers
+\setuppagenumbering[location=]
+
+
+
+%%%%%%%%%%    Colors 
+\definecolor[darkBlue][h=264E7F]
+\definecolor[veryDarkBlue][h=00397F]
+\definecolor[lightBlue][h=3E80B2]
+\definecolor[veryLightBlue][h=DEEBFD]
+
+
+%%%%%%%%%%    Fonts and such
+%\usemodule[simplefonts][size=10pt]
+%\setupbodyfont[Palatino, 10pt]
+%\setsansfont[Roboto]
+%\setmonofont[Consolas]
+\setuphead[subject][textstyle=\bf, textcommand=\ss, deeptextcommand=\uppercase]
+
+%%%%%%%%%%    Symbols and Icons from FontAwesome
+\definefontsynonym[FontAwesome][fontawesome]
+\definesymbol[phone][\getglyph{FontAwesome}{\char61589}]
+\definesymbol[mobile][\getglyph{FontAwesome}{\char61707}]
+\definesymbol[email][\getglyph{FontAwesome}{\char61664}]
+\definesymbol[globe][\getglyph{FontAwesome}{\char61612}]
+\definesymbol[github][\getglyph{FontAwesome}{\char61595}]
+\definesymbol[linkedin][\getglyph{FontAwesome}{\char61665}]
+\definesymbol[bitbucket][\getglyph{FontAwesome}{\char61809}]
+\definesymbol[stackoverflow][\getglyph{FontAwesome}{\char61804}]
+\definesymbol[twitter][\getglyph{FontAwesome}{\char61593}]
+%%%%
+\definesymbol[check][{\scale[height=.4\bodyfontsize]\getglyph{FontAwesome}{\char61452}}]
+
+
+
+%%%%%%%%%%    URLs
+\useURL[gmail][mailto:evgeniy.sharapov@gmail.com][][evgeniy.sharapov@gmail.com]
+\useURL[linkedin][http://www.linkedin.com/in/evgeniysharapov][][{\symbol[linkedin] evgeniysharapov}]
+\useURL[bitbucket][https://bitbucket.org/evgeniysharapov][][{\symbol[bitbucket] evgeniysharapov}]
+\useURL[github][https://github.com/evgeniysharapov][][{\symbol[github] evgeniysharapov}]
+\useURL[stackoverflow][http://stackoverflow.com/users/338701/evgeniysharapov][][{\symbol[stackoverflow] evgeniysharapov}]
+\useURL[twitter][https://twitter.com/evgeniysharapov][][{\symbol[twitter] @evgeniysharapov}]
+
+%%%%%%%%%%    Paragraphs
+\defineparagraphs[TwoColumn][n=2]
+\setupparagraphs[TwoColumn][1][width=0.6\textwidth]
+
+\defineparagraphs[InsideColumns][n=2]
+\setupparagraphs[InsideColumns] [2]  [align=flushright]
+\setupparagraphs[InsideColumns] [each]  [after={\blank[0em]}]
+
+%%%%%%%%%%    Custom Commands
+% name, address, phone, email
+\define[4]\Contact{{\scd\color[darkBlue]{#1}} \blank
+	{\tf #2} \crlf
+ 	{\lower.2ex\hbox{\symbol[phone]} {\tf #3} {\bf\cdot} \lower.2ex\hbox{\symbol[email]} {\tf #4 }}
+}
+% position, company, location, dates
+\define[4]\Position{%
+\startInsideColumns
+{\bf #2} \crlf
+{\it #1}
+\InsideColumns
+\hbox to 5em {
+#3}
+\hbox to 5em {
+#4}
+\stopInsideColumns%
+}
+% setup item lists
+\setupitemgroup[itemize][each][packed][symbol=check,before={\blank[small]}]
+
+
+\starttext
+%\showlayout
+%\showframe
+%\showgrid
+%%%%%%%%%%    Fancy Header
+\startcombination[2*1, distance=0.01\textwidth]
+	% contact
+	{\framed[width=0.6\textwidth,align=flushleft,frame=off]{% !important
+		\Contact
+			{Evgeniy N. Sharapov}
+			{3371, Mission Lake Dr, Apt 380, Orlando FL 32817}
+			{(630) 448-0827}
+			{\from[gmail]}}}{}
+	% social
+	{\framed[width=0.39\textwidth, align=flushleft,
+			background=color, backgroundcolor=veryLightBlue,frame=off,
+			backgroundcorner=round, backgroundradius=1ex,
+			offset=1ex]{\noindent
+		{\bf \from[linkedin]} \crlf
+		%{\bf \from[twitter]} \crlf
+		{\bf \from[github]} \crlf
+		{\bf \from[bitbucket]} \crlf
+		{\bf \from[stackoverflow]}}}{}
+\stopcombination
+
+\hairline
+
+%%%%%%%%%%    First Column of One-page document
+\startTwoColumn
+\subject{Relevant Experience}
+\Position{Sr. Software Development Engineer}{StoneRiver, Inc}{Orlando, FL}{Apr, 2013 -- }
+\startitemize
+	\item Front-end and back-end development of multiple web applications.
+	\item Testing and Release process via Jenkins and RobotFramework.
+     \item Client and tech support.
+	\item JBoss AS, Wildfly 8, AS/400, MS SQL, Java, Hibernate, Python, HTML5, Javascript
+\stopitemize
+
+\Position{Developer}{Click2Interact}{Orlando, FL}{Sep, 2012 -- Jan, 2013}
+\startitemize
+    \item Client and technical support of multiple applications.
+	\item Organization and execution of third party software compatibility testing.
+	\item Development of usser interface, backend processes and auxiliary scripting
+	\item Organization of the testing and release process.
+	\item Websphere AS 7; JBoss 5, 6; Wildfly 8; AS/400; MS SQL Server; Java; Hibernate 3.5; Python; HTML5;Javascript;
+\stopitemize
+
+\Position{Software Development Engineer}{Prognoz}{Perm, Russia}{Mar, 2012 -- Jul, 2012}
+\startitemize
+    \item Client and technical support of multiple applications.
+	\item Organization and execution of third party software compatibility testing.
+	\item Development of usser interface, backend processes and auxiliary scripting
+	\item Organization of the testing and release process.
+	\item Websphere AS 7; JBoss 5, 6; Wildfly 8; AS/400; MS SQL Server; Java; Hibernate 3.5; Python; HTML5;Javascript;
+\stopitemize
+
+\Position{Consultant/Programmer Analyst}{Marlabs Inc.}{Orlando, FL}{Mar, 2007 -- Dec, 2012}
+\startitemize
+    \item Client and technical support of multiple applications.
+	\item Organization and execution of third party software compatibility testing.
+	\item Development of usser interface, backend processes and auxiliary scripting
+	\item Organization of the testing and release process.
+	\item Websphere AS 7; JBoss 5, 6; Wildfly 8; AS/400; MS SQL Server; Java; Hibernate 3.5; Python; HTML5;Javascript;
+\stopitemize
+
+\Position{Engineer}{Fermi National Accelerator Lab}{Batavia, IL}{Jan, 2005 -- Aug, 2005}
+\startitemize
+     \item Client and technical support of multiple applications.
+	\item Organization and execution of third party software compatibility testing.
+	\item Development of usser interface, backend processes and auxiliary scripting
+	\item Organization of the testing and release process.
+	\item Websphere AS 7; JBoss 5, 6; Wildfly 8; AS/400; MS SQL Server; Java; Hibernate 3.5; Python; HTML5;Javascript;
+\stopitemize
+
+\Position{Software Developer}{InfoTelecom, LLC}{Perm, Russia}{Oct, 2003 -- Jul, 2004}
+\startitemize
+     \item Client and technical support of multiple applications.
+	\item Organization and execution of third party software compatibility testing.
+\stopitemize
+
+\Position{Software Developer}{iTech Software}{Perm, Russia}{Oct, 2002 -- Sep, 2003}
+\startitemize
+     \item Client and technical support of multiple applications.
+	\item Organization and execution of third party software compatibility testing.
+\stopitemize
+
+
+%%%%%%%%%%    Second Column of One-page document
+\TwoColumn
+
+\subject{Skills}
+\startitemize
+\item Java, C/C++, Shell, Python, Clojure, Ruby
+\item MS SQL, MySQL, Oracle, MongoDB, BerkleyDB
+\item Apache Camel, JBoss Drools, Spring, iBatis, Websphere AS, JBoss AS, Wildfly,
+\item Mercurial, Git, Subversion
+\item Ant, Maven, Gradle, soapUI, RobotFramework, Jenkins
+\item HTML5, Javascript, CoffeeScript, Sass, Rails
+\stopitemize
+
+\subject{Education}
+\startitemize
+\item M.Eng. Industrial Engineering, {\unhyphenated Lehigh University}
+\item B.Eng. Automated Control Systems, Perm State Technical University, Russia
+\stopitemize
+
+\subject{Books}
+\startnarrower
+{Instant Apache Camel Messaging System}, {\em Packt Publishing}, 2013, ISBN 9781782165347 
+\stopnarrower
+
+\subject{Certification}
+\startitemize
+\item Sun Certified Programmer for Java \crlf (CX-310-035) 
+\item Sun Certified Web Component Developer \crlf (CX-310-081)
+\stopitemize
+
+\subject{Languages}
+\startnarrower
+English, Russian
+\stopnarrower
+
+\stopTwoColumn
+\stoptext

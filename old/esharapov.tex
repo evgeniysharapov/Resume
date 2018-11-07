@@ -1,0 +1,156 @@
+\setupcolors[state=start]
+\usesymbols[uni]
+
+\setupinteraction[state=start,
+	title={Evgeniy N. Sharapov},
+	subtitle={R\'esum\'e},
+	author={Evgeniy N. Sharapov},
+	keyword={resume}]
+
+%% Layout
+\setuppapersize[letter][letter]
+\setuplayout[
+  topspace=0cm,
+  top=0cm,
+  backspace=1cm,
+  margin=1cm,
+  rightedge=0cm,
+  rightmargin=0.5cm,
+  width=fit,
+  % extend height of the body
+  height=\dimexpr
+    \paperheight-\topspace+\footerheight+\footerdistance-1cm\relax,
+]
+
+\setupwhitespace[small]
+
+\definecolor[color1][r=1,b=0.4]
+\definecolor[color2][r=1,g=0.4]
+
+%% Fonts and such
+\usemodule[simplefonts][size=10pt]
+\usetypescript[palatino]
+\setupbodyfont[palatino,10pt]
+\setsansfont[Roboto]
+\setmonofont[Consolas]
+\setuphead[subject][textstyle=\bf, textcommand=\ss, deeptextcommand=\uppercase]
+
+%% icons from the FontAwesome
+\definefontsynonym[FontAwesome][fontawesome]
+\definesymbol[phone][\getglyph{FontAwesome}{\char61589}]
+\definesymbol[mobile][\getglyph{FontAwesome}{\char61707}]
+\definesymbol[email][\getglyph{FontAwesome}{\char61664}]
+%\definesymbol[email][\getglyph{FontAwesome}{\char113\kern-.66em\raise.25ex\hbox{\char51}}]
+%\def\Check{{\tfa\symbol[box]}}
+%\def\Checked{{\tfa\symbol[boxChecked]}}
+
+
+
+
+%% Custom Commands
+
+
+\starttext
+%% Header
+\midaligned { }
+{ \scc Evgeniy N. Sharapov }
+\wordright{
+ {\rmx 3371, Mission Lake Dr, Apt 380, Orlando FL 32817}} \nowhitespace \\
+\wordright{
+ {\bf \symbol[mobile]}  (630) 448-0827 \cdot \  {\bf \symbol[email]} evgeniy.sharapov@gmail.com
+ }
+
+\hairline
+
+%\subject{This is a test.}
+%Serif typeface: regular, {\em italic}, {\bf bold} and {\em\bf bold italic} fonts.
+%\subject{\color[color2]{This is another test}}
+%{\ss Sans--serif typeface: regular, {\em italic}, {\bf bold} and {\bf\em bold italic} fonts.}
+%{\tt Monospace typeface: regular, {\em italic}, {\bf bold} and {\bf\em bold italic} fonts.}
+\loadmapfile [applesymbols25xx-apple-applesymbols.map]
+\loadmapfile [applesymbols26xx-apple-applesymbols.map]
+\definefontsynonym [UnicodeRegular25] [applesymbols25xx-AppleSymbols]
+\definefontsynonym [UnicodeRegular26] [applesymbols26xx-AppleSymbols]
+\setupsymbolset[Unicode Healing Signs]
+%\showsymbolset[Unicode Warning Signs][n=4]
+\symbol [Ankh]
+
+\subject{Profile}
+\startnarrower
+Over 10 years of IT experience from administering servers to the scientific software development.
+
+Certified Java Developer with knowledge and experience in an array of Java technologies (JNI, JDBC, J2EE, WebServices, JMS, etc.).
+
+Database and Object-Oriented Architecture design for big and complex applications.
+Proficient in a variety of programming languages, development tools, frameworks, and database management systems.
+
+Organization of full software development life cycle: source code management, testing, quality assurance, building and deployment processes.
+
+Ability to work alone with specifications and in a team (experience varies from small ones to multinational).
+
+Solid educational background in engineering, statistics, mathematics, programming.
+\stopnarrower
+
+\subject{Qualifications}
+
+Programming: Java, C/C++, Python, Clojure, Ruby
+
+Development: Eclipse Platform, IBM RAD 6/7, Ant, Maven, JUnit, DbUnit, Subversion, Perforce, Git, CVS, VSS
+
+Database: MS SQL Server 2000/2005, Oracle 9i/10g, SQLite, MySQL
+
+Technologies: JNI, Swing, SWT, Java 2D, RMI, EJB, JTA, JMS, JNDI, JDBC, JSP, Servlets, XML-RPC, XML, XSLT,
+XPath, JAX-RPC, WSDL4J, Axis, Hibernate, Apache Camel, Spring Framework, Struts, JBoss Drools, Websphere 5/6,
+JBoss AS, IBM Websphere Process Server, IBM Business Process Manager
+
+Web: JavaScript, (X)HTML, CSS, AJAX, SSL, Apache HTTP Server, Apache Tomcat, soapUI
+
+Desktop: Microsoft Office: Project, Word, Excel, PowerPoint
+
+Science: Matlab, Maple, Minitab, R System, ROOT, AMPL, ILOG CPLEX, LOQO
+
+\subject{Experience}
+
+StoneRiver, Inc.
+Senior Software Development Engineer
+Orlando, FL
+Apr, 2013 --
+
+\startitemize
+	\item Client and technical support of multiple applications.
+	\item Organization and execution of third party software compatibility testing.
+	\item Development of usser interface, backend processes and auxiliary scripting
+	\item Organization of the testing and release process.
+	\item Websphere AS 7; JBoss 5, 6; Wildfly 8; AS/400; MS SQL Server; Java; Hibernate 3.5; Python; HTML5;Javascript;
+\stopitemize
+
+
+Click2Interact
+Developer
+Orlando, FL
+Sep, 2012 -- Jan, 2013
+
+\startitemize
+	\item Educational platform for child development centers and pre-schools.
+	\item Database design and business model prototyping.
+	\item User interface using Twitter Bootstrap, jQuery and HTML5.
+	\item Ruby On Rails 3.2, MySQL, RESTful Web-Services, Rackspace Cloud, jQuery, Twitter Bootstrap,
+\stopitemize
+
+Prognoz, http://www.prognoz.com/en/index.php
+Lead Java Developer
+Perm, Russia
+Mar, 2012 -- Jul, 2012
+
+\startitemize
+	\item Tuning, installation and configuration of the IBM Websphere Process Server and Business Process Manager in cluster environment.
+	\item Development of the business process integration in Integration Designer.
+	\item Development of the "Meetings" application for the Moscow Government (documents exchange, meetings
+and appointments scheduling, notification services) for mobile and desktop platform.
+	\item Java 1.6, GWT, JPA 2, Web-Services, IBM Websphere Process Server and IBM BPM 8	
+\stopitemize
+
+
+
+
+\stoptext
