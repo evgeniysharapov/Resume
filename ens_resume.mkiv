@@ -1,0 +1,188 @@
+%% resume.mkiv
+%%
+%% Evgeniy Sharapov <evgeniy.sharapov@gmail.com>
+%%
+%% 
+\startenvironment ens_resume
+ \mainlanguage[en]
+ \usecolors[crayola]
+
+ \setuppapersize[letter, portrait][letter]
+ \setupinterlinespace[line=1.25em]
+ \setupwhitespace[quarterline]
+% * PDF releated
+ 
+ \pdfbackendsetinfo{desired role}{Lead Software Engineer}
+ \pdfbackendsetinfo{author}{Evgeniy Sharapov}
+ \setupinteraction[state=start,
+     color=OuterSpace,
+     contrastcolor=CeruleanBlue,
+     author={Evgeniy N. Sharapov},
+     keyword={resume, curriculum vitae, created with TeX and some scripting}
+     style=\tf
+ ]
+
+% * Fonts
+% **  FontAwesome Glyphs and Symbols
+ \definefontsynonym[FontAwesome][fontawesome]
+ \definesymbol[phone][\getglyph{FontAwesome}{\char61589}]
+ \definesymbol[mobile][\getglyph{FontAwesome}{\char61707}]
+ \definesymbol[email][\getglyph{FontAwesome}{\char61664}]
+ \definesymbol[globe][\getglyph{FontAwesome}{\char61612}]
+ \definesymbol[github][\getglyph{FontAwesome}{\char61595}]
+ \definesymbol[linkedin][\getglyph{FontAwesome}{\char61665}]
+ \definesymbol[bitbucket][\getglyph{FontAwesome}{\char61809}]
+ \definesymbol[stackoverflow][\getglyph{FontAwesome}{\char61804}]
+ \definesymbol[twitter][\getglyph{FontAwesome}{\char61593}]
+ \definesymbol[check][{\scale[height=.4\bodyfontsize]\getglyph{FontAwesome}{\char61452}}]
+% ** Body Fonts
+ % \setupbodyfont[variable, 11pt]
+ \definefontfamily[sfns][ss][sfnsregular]
+ \definefontfamily[jetbrains][ss][jetbrainsmonovariable]
+ 
+ \setupbodyfont[sfns, 12pt]
+ %\usemodule[simplefonts]
+ %\setmainfont[Roboto Condensed Light]
+ 
+ 
+% * Setup Text Elements
+ % setup itemizations 
+ \setupitemgroup[itemize][each][packed,joinedup][symbol=check,before=]
+ % titles
+ \setuphead[title][align=center, style=\bfd]
+ %% subjects
+ \setuphead[subject][style=\ssc\cap\bf,color=MidnightBlue]
+ % Page is headed by header 
+ \setupheadertexts[{\cap Evgeniy N. Sharapov}]
+ % setup footer
+ \setupfootertexts[{\pagenumber\hspace[medium] of \lastpage}]
+ %\setuppagenumber[state=none]
+%  \setuppagenumbering[location={footer,middle}]
+%  \setuppagenumbering[location=]
+% \setupfootertexts[{\sc Page \currentpage{} of \lastpage}]
+
+% * Page Layouts 
+ \definelayout[firstpage][
+   topspace=0cm,
+   top=0cm,
+   backspace=1.2cm,
+   margin=1cm,
+   rightedge=0cm,   
+   %rightmargin=1cm,
+   leftmargin=0.5cm,
+   width=fit,
+   height=fit,
+   header=0.5cm,
+   footer=0.5cm,
+   bottom=0.5cm,
+ ]
+ 
+ \definelayout[otherpages][
+   topspace=0.5cm,
+   top=0cm,
+   headerdistance=0.5cm,
+%   backspace=1cm,
+   margin=1cm,
+   rightedge=0cm,
+   leftmargin=0.5cm,
+   width=fit,
+   height=fit,
+   header=0.5cm,
+   footer=0.5cm,
+ ]
+ 
+
+% * URLs
+ \useURL[gmail][mailto:evgeniy.sharapov@gmail.com][][evgeniy.sharapov@gmail.com]
+ \useURL[linkedin][http://www.linkedin.com/in/evgeniysharapov][][{\symbol[linkedin]\quad linkedin/in/evgeniysharapov}]
+ \useURL[bitbucket][https://bitbucket.org/evgeniysharapov][][{\symbol[bitbucket]\quad bitbucket/evgeniysharapov}]
+ \useURL[github][https://github.com/evgeniysharapov][][{\symbol[github]\quad github/evgeniysharapov}]
+ \useURL[stackoverflow][http://stackoverflow.com/users/338701/evgeniysharapov][][{\symbol[stackoverflow]\quad stackoverflow/evgeniysharapov}]
+ \useURL[twitter][https://twitter.com/evgeniysharapov][][{\symbol[twitter]\quad @evgeniysharapov}]
+
+
+% * Various Parts of the Resume 
+% ** Contact 
+% Parameters:  name, address, phone, email
+ \define[3]\Contact{
+   {\ss\scd\bold\color[MidnightBlue]{#1}}
+   \blank
+   %\hairline
+   \hbox{
+     {\lower.2ex\hbox{\symbol[phone]} {\tf #2}  {\bf\cdot}  \lower.2ex\hbox{\symbol[email]} {\tf #3 }}
+ }}
+
+% **  Position 
+% Parameters: position, company, location, dates, link
+ \define[5]\Position{%
+     {\goto{\bf #2}[#5]} \crlf
+     {\it #1}
+     \hbox to 1em {
+       #3}
+     \hbox to 1em {
+       #4}
+ }
+% ** Employment 
+% same as Position but different
+% Parameters: Company, Title, Dates, LinkName
+ \define[4]\Employment{
+   \blank
+   \setupframed[height=1cm,frame=off]
+   \startcombination[2]
+     {\framed[width=12cm,top=\vss,bottom=\vss,align=right]{%
+	 {\reference[#4]{}\sans \bfa #1}\\
+	 {\sans \bf #2}
+     }}{}
+     {\framed[width=5cm,align=flushright,top=\vss,bottom=\vss]{%
+	 {\sans \bf #3}
+     }}{}
+   \stopcombination
+ }
+
+ \define[3]\EmploymentWithRoles{
+   \blank
+   \setupframed[height=1cm,frame=off]
+   \startcombination[2]
+     {\framed[width=12cm,top=\vss,bottom=\vss,align=right]{%
+	 {\reference[#3]{}\sans \bfa #1}
+     }}{}
+     {\framed[width=5cm,align=flushright,top=\vss,bottom=\vss]{%
+	 {\sans \sc #2}
+     }}{}
+   \stopcombination
+ }
+ 
+% ** Client  
+% When worked as a Consultant mention Client/Projects
+ \define[3]\Client{
+   \blank
+   \setupframed[frameoff]
+   \startcombination[2]
+     {\framed[width=12cm,top=\vss,bottom=\vss,align=right]{%
+         {\sans \bf Client: #1}\\
+         {\sans \bf Project #2}
+     }}{}
+     {\framed[width=5cm,align=flushright,top=\vss,bottom=\vss]{%
+         {\bf #3}
+     }}{}
+   \stopcombination
+ }
+
+% ** Role
+% Parameters: Title, Dates
+ \define[2]\Role{
+   \blank
+   \setupframed[frameoff]
+   \setupcombinations[after=]
+   \startcombination[2]
+     {\framed[width=12cm,top=\vss,bottom=\vss,align=right]{%
+         {\sans \bf #1}
+     }}{}
+     {\framed[width=5cm,align=flushright,top=\vss,bottom=\vss]{%
+         {\sans \bf #2}
+     }}{}
+   \stopcombination
+ }
+
+ 
+\stopenvironment  

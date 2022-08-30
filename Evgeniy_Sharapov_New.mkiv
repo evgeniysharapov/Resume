@@ -1,0 +1,342 @@
+\environment ens_resume
+
+\setuppagenumber[state=stop]
+\setupfootertexts[{}]
+\starttext
+% * Visual Debugging
+%% Debugging
+%\showlayout
+%\showboxes
+%\showframe
+%\showgrid
+%% end of debugging
+
+%% * First Page Setup 
+\setuplayout[firstpage]
+% no header for the first page 
+\setupheader [state=stop]
+% * Resume Header 
+ \startcombination[2, distance=0.01\textwidth]
+   % contact
+   {\framed[width=0.6\textwidth,align=flushleft,frame=off]{% !important
+       \Contact
+	 {Evgeniy N. Sharapov}
+	 {(630) 448-0827}
+	 {\from[gmail]}
+   }}{}
+   % social
+   {\framed[width=0.39\textwidth, align=flushleft,
+       background=color, backgroundcolor=Periwinkle,frame=off,
+       backgroundcorner=round, backgroundradius=1ex,
+       offset=1ex]{\noindent
+       {\bf \from[linkedin]} \crlf
+       {\bf \from[github]} \crlf
+       {\bf \from[bitbucket]} \crlf
+       {\bf \from[stackoverflow]}}}{}
+ \stopcombination
+
+% * Profile
+\subject{Profile}
+Software Development Engineer with over 15 years of experience designing, implementing and supporting software solutions in various domains: finance, insurance, healthcare, energy, automation.
+Extensive experience includes programming in  Java, JavaScript, Groovy, NodeJS, Python and  many other programming languages,  as well as work with  Spring, Quarkus, ME(AR)N ( Mongo ExpressJS React/Angular NodeJS), Apache Camel, OSGi, Ruby On Rails, Docker, Kubernetes and many other different frameworks and tech stacks .
+Throughout my career I had to learn new environments, tools, libraries and wear different hats from Solution Architect to DevOps Engineer. 
+Current areas of interest include micro-service and streaming data architectures; on-premise, cloud and hybrid deployment models; domain specific languages.
+
+\startitemize
+  \item Delivered code and performed code review.
+  \item Provided guidance and shared technical knowledge with developers, be it cloud technology, aspects of configuring CI/CD or choosing data structure/algorith for implementation.
+  \item Delivered technical design and documentation working as a mediator between developers.
+  \item Developed automated tests for functional testing using  Robot Framework, Selenium, Playwright, Cucumber.
+  \item Lead teams of developers and QA engineers navigating between  DevOps routines and POC implementation to clarify technical requirements. 
+  \item Have prepared interviews strategies and conducted many technical interviews with students on campus and with experienced professionals. 
+\stopitemize
+
+% * Technical Skills
+\subject{Technical Skills}
+\startitemize
+\item {\bf Programming:} Java, JavaScript, Groovy, Python, C\#/F\#, Clojure, Ruby, C/C++
+\item {\bf DevOps:} Linux Shell, Gitlab CI/CD, Jenkins, Maven, Gradle, Git, Mercurial, svn
+\item {\bf Cloud}: Amazon Web Services (AWS), Azure, OpenShift
+\item {\bf Virtualization:} AWS ECS, Docker, Kubernetes, VirtualBox
+\item {\bf Database:}  MySQL, Mongo, DynamoDB, Redis, MS SQL, Oracle, SQLite, Berkley DB.
+\item {\bf Technologies:} Spring and Spring Boot, Quarkus, Liferay, Apache Camel, SOAP and REST APIs, OSGi, JBoss Drools, iBatis, Hibernate, JNI, Swing, SWT, Java 2D, RMI, EJB, JTA, JMS, JNDI, JDBC, JSP, Servlets, XML-RPC, XML, XSLT, XPath, JAX-RPC, WSDL4J, Axis, Hibernate, JBoss Drools, Websphere 5/6, JBoss AS, IBM Websphere Process Server, IBM BPM.
+\item {\bf Web:} ReactJS, AngularJS, Webpack, HTML5, CSS3, Less, SASS
+\stopitemize
+
+% * Certification
+\subject{Certification}
+\startitemize
+\item AWS Certified Cloud Practitioner (CLF-C01)
+\item Sun Certified Programmer for Java (CX-310-035) 
+\item Sun Certified Web Component Developer (CX-310-081)
+\stopitemize
+
+
+%% * All Other Pages Setup
+\page
+\setuppagenumber[state=start]
+\setupfootertexts[{\pagenumber\hspace[medium] of \the\numexpr\lastpage - 1}]
+\setuplayout[otherpages]
+% now let's show the header
+\setupheader[state=start]
+
+% * Experience
+\subject{Professional Experience}
+
+% ** Audacious
+\EmploymentWithRoles{Audacious Inquiry -- Baltimore, MD}
+{}
+{audacious2}
+\Role{Lead Software Engineer}{Mar 2021~--~Present}
+Development, support and maintainance of PULSE (Patient Unified Lookup System for Emergencies) and Gateway (data exchange with National Network for Electronic Health Records exchange) platform. 
+
+The platform based on multiple applications and services deployed in AWS cloud and leveraging its functionality, such as SQS, SNS, ECS, RDS, DynamoDB, Lambda, S3 ) with responsive modern UI/UX, SSO and integrations with National Network, third party services.
+
+\startitemize
+\item Hands-on code delivery
+\item Turning Product manager and product owner visions for the applications into a detailed technical documentation
+\item Architecture and design documentation and DevOps for cloud infrastructure and CI/CD 
+\item R\&D work, Proof-of-concept implementation and providing direction and support for the development 
+ team
+\item Integration and testing from QA to testing connectivity with third-party services (DataDog, Surescripts, eHealthExchange, etc)
+\item Responsible for Level 3 customer and applications support.
+\item {\bf Skills: } Node.js, Java, .NET Framework, MySQL, Terraform, AWS, Continuous Integration and Continuous Delivery (CI/CD), Fast Healthcare Interoperability Resources (FHIR), HL7 Standards, XML 
+\stopitemize
+
+\Role{Senior Software Engineer}{Mar 2019~--~Mar 2021}
+Development and support of modular based application platform for connected healthcare - ULP (Unified Landing Page). This platform was leveraging Liferay OSGi and portlet architecture to bring highly customizable applications to the clients - HIEs, providers and payers, integrating it into their software stack as well as provide best user experience and integration via SSO.
+
+\startitemize
+\item Hands on code delivery and code review for code in the back-end 
+\item R\& D and delivery of design documents for new features, in particular, leveraging portlets and OSGi architecture. 
+\item Quality tests and Improvements in CI/CD process and transition from on on-premise type deployment to a cloud (AWS) deployment. 
+\item Support and troubleshooting of the issues submitted by the customers and internal users
+\item {\bf Skills:} Java, Liferay, OSGi, Shell Scripting, Docker, Node.js,MySQL, JavaScript, HTML5, CSS
+\stopitemize
+\page
+% ** Avanade 
+\Employment{Avanade ( Infusion before 2017)  --  Raleigh, NC}
+{Senior Consultant}
+{Aug~2014~--~Mar 2021}
+{avanade}
+
+Design, documentation, hands-on code development and code review. Major project - complete innovation - metadata driven, highly configurable platform. The first implementation of the concept and design was an application for all aspect of life insurance underwriting for Metlife subsidiary in Japan (Alico). 
+
+Principally staffed on MetLife. Worked directly on the SWAT Applications Team - small team of talented developers that reports directly to the CIO for Rapid Application Development.
+
+Helped to augment recruitment processes in MetLife for growth and promotion of tech culture across the organization, conducting over 100 technical interviews with developers  to senior technical architects and leads.
+
+\startitemize
+\item Implementation and maintainance of the configuration application (Composer) using Node.Js, AngularJS, React and Mongo
+\item Design and architecture of the back-end utilizing reactive streams (Reactor) to achieve better performance and scalability.
+\item Design and implementation of application Groovy scripting, testing frameworks, loading and data migration tools.
+\item Organization of CI process based on Docker containers.
+\item Management of development process through JIRA, Jenkins, Stash, VSTS
+\item Education and training of engineering teams; technical interviewing of candidates for Metlife and Infusion and recruitment on campus (UNC).
+\item {\bf Skills:} Mongo; Java; Spring, Reactor, Groovy; JavaScript; NodeJS; Docker; Shell Scripts; AngularJS; React; HTML5; Less; JIRA
+\stopitemize
+
+% ** StoneRiver 
+\Employment{Stone River, Inc -- Orlando, FL}
+{Senior Software Development Engineer}
+{Apr 2013~-–~Aug 2014}
+{stoneriver}
+
+Support and development of the software product for mid-size workers comp insurance companies. Fullstack development on Java, AS/400 and JBoss/Wildfly platforms. Customer support and customization. Test and release process using automation tools.
+
+\startitemize
+\item Customer and technical support for multiple applications.
+\item Organization and execution of third party software compatibility testing using Selenium.
+\item Development of user interface, back-end processes and auxiliary scripting
+\item Organization of the testing and release process.
+\item {\bf Skills:} Websphere AS 7; JBoss 5, 6; Wildfly 8; AS/400; MS SQL Server; Java; Hibernate 3.5;  Python; HTML5; Javascript;
+\stopitemize
+
+% ** Click2Interact
+\Employment{Click2Interact -- Orlando, FL}
+{Developer}
+{Sep 2012 -- Jan 2013}
+{click}
+
+Design and implementation of teacher-parent communication applicaiton for child development centers and pre-schools. Fullstack development using Ruby on Rails framework, JavaScript and Clojure. 
+
+\startitemize
+\item Design and implementation of the back-end server code using Ruby On Rails framework
+\item Database design and business model prototyping. Researched the planetarium, its potential partners, and its competitors
+\item User interface using Twitter Bootstrap, jQuery and HTML5.Pitched a cohesive campaign idea and ways to activate it
+\item {\bf Skills:} Ruby On Rails 3.2, MySQL, RESTful Web-Services, Rackspace Cloud, jQuery, Twitter Bootstrap,
+\stopitemize
+
+% ** Prognoz
+\Employment{Prognoz -- Perm Russia}
+{Software Engineer}
+{Mar 2012 –- Jul 2012}
+{prognoz}
+ Development of an ``Electronic Government'' platform based on IBM BPM and end-user web-application using GWT. Fullstack development with a strong focus on web-services and development for BPM.
+\startitemize
+\item Tuning, installation and configuration of the IBM Websphere Process Server and Business Process Manager in cluster environment.
+\item Development of the business process integration in Integration Designer.
+\item Development of the “Meetings” application for the Moscow Government (documents exchange, meetings and appointments scheduling, notification services) for mobile and desktop platform.
+  http://www.prognoz.com/
+\item {\bf Skills:} Java 1.6, GWT, JPA 2, Web-Services, IBM Websphere Process Server and IBM BPM 8
+\stopitemize
+
+% ** Marlabs
+\Employment{Marlabs -- Orlando, FL}
+{Consultant/Programmer Analyst}
+{Mar 2007 –- Dec 2012}
+{marlabs}
+Worked as a consultant on multiple projects at Siemens Shared Services (division of Siemens) developing custom vendor management application, documents management application, FileNet migration tools, scan and recognize application, application for customs compliance control; and at Team Disney, where I was involved in the project refactoring and improving existing system for bookings and reservations.
+
+\Client{Siemens Shared Services}
+{Siemens Compliance  - SICOM (USA, Germany)}
+{Nov 2010 –- Dec 2012}
+\startitemize
+\item Analysis of the business requirements and prototyping
+\item Changes in user interface of the applications (JavaScript, HTML, CSS)
+\item Changes in back-end processes (Java, T-SQL, Drools, XSLT) directed to a better performance, reliability, and scalability of the back end data processing
+\item Migration of the application in SICOM stack to a new application platform (SQL Server 2005, WebSphere 6.1) to a different location (both software and hardware transition)
+\item Optimization of development and release cycle  - quicker builds and deployment
+\item {\bf Skills:} Java 5, RAD 7.5, Eclipse Platform, Drools, SQL Server 2000/2005, WebSphere 5.1/6.1, Javascript, CSS, HTML, XML/XSLT
+\stopitemize
+
+\Client{Team Disney}
+{Disney One Air Projec}
+{Apr 2010 –- Oct 2010}
+Improvements of existing SBC Booking and Reservation system
+\startitemize
+\item Analysis of business and technical requirements; prototyping
+\item Implementation of Secure Flight requirements for air booking
+\item Changes to existing data model, EJB, user interfaces (HTML, CSS, Javascript)
+\item Integration testing of changes to existing applications (A La Carte, SBC)
+\item Shell/Perl/AWK scripts for error detection and post incident analysis (parsing and analysis of log files)
+\item Triaging, troubleshooting the incidents, fixing, testing, integration (full maintenance cycle)
+\item On call support for the applications
+\item {\bf Skills:} Java 5, RAD 7.5, JSF, Struts,  HTML, JavaScript, jQuery, Oracle 10g, Websphere 6, JBoss AS,  EJB, jQuery, MQ Series, Ant, ClearCase, AIX, Shell/AWK/Sed scripting, Perl
+\stopitemize
+
+\Client{Siemens Shared Services}
+{Project: Global Services Customs Declaration}
+{Nov 2010 –- Dec 2012}
+ application that allows users to clear up shipments for import/export operations
+\startitemize
+\item Analysis of business requirements
+\item Organization of development team meetings and conference calls
+\item Wrote technical specification for web services (WSDL and WSDD)
+\item Designed front end using Java Servlets, JSP, HTML, CSS, and Javascript using AJAX technology
+\item Configuration of iBatis ORM and Spring Framework
+\item Design and implementation of business logic and data processing routes using Apache Camel
+\item Wrote business rules using Drools and business logic processing customs declarations
+\item Data transformation between DIN5 CUSDEC formats
+\item Created Junit tests and Ant build scripts
+\item Tested integration with logistic companies (Kuhne\& Nagel, DHL, Fedex)
+\item {\bf Skills:}  Java 5, Apache Axis, Apache Camel, JBoss, Drools, Spring 2.5, Apache iBatis, MS SQL Server 2000, T-SQL, WebSphere 6, XML/XSLT, jQuery, Subversion, Ant, soapUI
+\stopitemize
+
+\Client{Siemens Shared Services}
+{Paperless invoicing application}
+{May 2008 –- Jun 2009}
+\startitemize 
+\item Worked closely with third party companies (ScanOne, DirectInsite) and with business clients (Siemens Operating Companies)
+\item Wrote technical specification for processing invoice information
+\item Data transformation to/from OAGIS, DIN 5, EzAP formats
+\item Database design for the invoices images storage on MS SQL Server 2005
+\item Developed business rules engine (table driven), and its front end accessible by the business clients
+\item Developed high performance TIFF library based on libtidd JAI and ImageIO
+\item Tools for extracting invoice image data from Filenet into application database
+\item Integration of the paperless invoice processing application with existing AR/AP applications
+\item Organization of source code management using Subversion
+\item Created Junit tests and Ant build scripts
+\item Integration testing with outsource scanning/processing companies (ScaneOne, DirectInsite)
+\item {\bf Skills:} Java 5, Apache Camel, Spring 2.5, Apache iBatis, MS SQL Server 2000, T-SQL, WebSphere 6, XML/XSLT, jQuery, Subversion, Ant
+\stopitemize
+
+\Client{Siemens Shared Services}
+{Invoice Management Application}
+{May 2007 –- Apr 2008}
+\startitemize
+\item Developed vendor management module based with front-end on Struts and Javascript.
+\item Wrote transformation of vendor/invoice data to/from XML,CSV, EDI, DIN5 formats.
+\item Designed data validation and consistency checks using Java and XML Schemas
+\item Tuned application and database performance using caching, using NIO, queries optimization, indexes.
+\item Designed and implemented application usage statistics based on Javascript and HTTP logs.
+\item Developed web-based tools for testing using Python (Pylons), HTML and Javascript.
+\item Wrote integration of the application with SAP (Spiridon) using JCo.
+\item Created JUnit tests and Ant build scripts.
+\item {\bf Skills:} Java 1.4,  MS SQL Server 2000, T-SQL, XML/XSLT, Struts, Websphere 5, Python, HTML, JavaScript, Ant,
+\stopitemize  
+
+% ** Fermilab 
+\Employment{Fermi National Accelerator Lab -- Batavia, IL}
+{Engineer}
+{Jan 2005 -- Aug 2005}
+{fermilab}
+Multiple internships and then engineering position at the high-energy physics project. Helped to design and implement various tools and applications used for data acquisition and control.
+
+Participated in the high energy physics international collaboration for Large Hadron Collider (LHC) experiment. At the time United States team worked on the Compact Muon Solenoid  (CMS)  – part of the LHC experiment - building alignment system for muon detector.
+\startitemize
+\item Wrote technical specification for a data acquisition system.
+\item Implemented multi-thread high performance server in Java controlling the system.
+\item Designed and tested software to communicate with hardware via Cyclade TS consoles.
+\item Database design for system configuration.
+\item XML-RPC interface to the control server functionality.
+\item Desktop program for system control using Swing
+\item {\bf Skills:} Java 1.4, Swing, HSQL, Hibernate, XML-RPC, Python, Shell scripting
+\stopitemize
+
+{\bf Research Assistant} in 2001, 2002, 2004                                                                                                                    
+\startitemize
+\item Performed data analysis (regression analysis of statistical data from the detectors) of the data from optical sensors using ROOT package.
+\item Developed software for above mentioned data analysis in C/C++ using ROOT framework.
+\item Designed blueprints for and constructed hardware test bench for optical sensors testing and calibration.
+\item Developed software in C and Python for optical sensors testing and calibrating.
+\item {\bf Skills:}  C/C++, ROOT, Python, Shell Scripting
+\stopitemize
+
+% ** InfoTelecom
+\Employment{InfoTelecom LLC -- Perm, Russia}
+{Software Developer}
+{Oct 2003 – Jul 2004}
+{infotelecom}
+Worked on the product software - highly customizable system of web-traffic statistics and monitoring. Back-end development on Oracle using PL/SQL and Java. 
+
+\startitemize
+\item Designed and implemented website statistics collection system based on Javascript, servlets, and PL/SQL
+\item Wrote graphs, charts, and diagram building library using Java2D and ImageIO, PL/SQL interface to it
+\item Implemented website template based generation software
+\item Developed website static content deployment tools using FTP
+\item {\bf Skills:}  Java 1.4, Java 2D, Oracle AS, Oracle 11g, PL/SQL, Shell Scripting, JavaScript
+\stopitemize
+
+% ** iTech Software
+\Employment{iTech Software -- Perm, Russia}
+{Software Developer}
+{Oct 2002 – Sep 2003}
+{itech}
+Developed software for telecommunication company. Have been doing both high-level and low-level programming using C and Java.
+
+\startitemize
+\item Developed web interface using JSP and Java for payphones management.
+\item Implemented Java code to work with IIS module in Visual C++ that controls network connections to the payphones.
+\item Wrote testing scenarios and performed software unit testing.
+\item {\bf Skills:}  Java 1.3, JNI, C/C++, JSP, JDBC, MS IIS, Interbase
+\stopitemize 
+
+% * Education 
+\subject{Education}
+\startitemize
+\item M.Eng. Industrial Engineering, {\unhyphenated Lehigh University}
+\item B.Eng. Automated Control Systems, Perm State Technical University, Russia
+\stopitemize
+
+% * Books
+\subject{Books}
+{Instant Apache Camel Messaging System}, {\em Packt Publishing}, 2013, ISBN 9781782165347 
+
+% * Languages
+\subject{Languages}
+\startnarrower
+English, Russian
+\stopnarrower
+
+\stoptext

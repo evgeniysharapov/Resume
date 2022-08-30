@@ -1,0 +1,17 @@
+* Audacious Inquiry 
+* Avanade
+* Infusion
+* StoneRiver, Inc.
+* Click2Interact
+* Prognoz
+* Marlabs Inc.
+* Fermi National Accelerator Lab
+* Skills
+ Java, Groovy, JavaScript, Python, Clojure, Ruby, C/C++
+ Mongo, MS SQL, MySQL, Oracle, BerkleyDB
+ Spring, Apache Camel, JBoss Drools, Spring, iBatis, Websphere AS, JBoss AS, Wildfly
+ Docker, Azure
+ Mercurial, Git, Subversion, JIRA
+ Maven, Gradle, Ant, soapUI, RobotFramework, Jenkins 
+ HTML5, CSS, SASS/LESS, AngularJS, Webpack, React, Rails
+* Education
