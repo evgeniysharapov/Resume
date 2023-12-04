@@ -127,7 +127,7 @@
 % Parameters: Company, Title, Dates, LinkName
  \define[4]\Employment{
    \blank
-   \setupframed[height=1cm,frame=off]
+   \setupframed[frame=off,location=top]
    \startcombination[2]
      {\framed[width=12cm,top=\vss,bottom=\vss,align=right]{%
 	 {\reference[#4]{}\sans \bfa #1}\\
@@ -139,24 +139,11 @@
    \stopcombination
  }
 
- \define[3]\EmploymentWithRoles{
-   \blank
-   \setupframed[height=1cm,frame=off]
-   \startcombination[2]
-     {\framed[width=12cm,top=\vss,bottom=\vss,align=right]{%
-	 {\reference[#3]{}\sans \bfa #1}
-     }}{}
-     {\framed[width=5cm,align=flushright,top=\vss,bottom=\vss]{%
-	 {\sans \sc #2}
-     }}{}
-   \stopcombination
- }
- 
 % ** Client  
 % When worked as a Consultant mention Client/Projects
  \define[3]\Client{
    \blank
-   \setupframed[frameoff]
+   \setupframed[frame=off]
    \startcombination[2]
      {\framed[width=12cm,top=\vss,bottom=\vss,align=right]{%
          {\sans \bf Client: #1}\\
@@ -168,14 +155,25 @@
    \stopcombination
  }
 
+ % use this for multiple roles within the company 
+ \define[2]\EmploymentWithRoles{
+   \blank
+   \setupframed[frame=off]
+   \startcombination[2]
+     {\framed[width=12cm,top=\vss,bottom=\vss,align=right]{%
+	 {\reference[#2]{}\sans \bfa #1}
+     }}{}
+   \stopcombination
+ }
+ 
 % ** Role
 % Parameters: Title, Dates
  \define[2]\Role{
-   \blank
-   \setupframed[frameoff]
+%   \blank
+   \setupframed[frame=off,location=top]
    \setupcombinations[after=]
    \startcombination[2]
-     {\framed[width=12cm,top=\vss,bottom=\vss,align=right]{%
+     {\framed[width=12cm,top=,bottom=\vss,align=right]{%
          {\sans \bf #1}
      }}{}
      {\framed[width=5cm,align=flushright,top=\vss,bottom=\vss]{%
@@ -183,6 +181,5 @@
      }}{}
    \stopcombination
  }
-
  
 \stopenvironment  
