@@ -21,7 +21,6 @@
      keyword={resume, curriculum vitae, created with TeX and some scripting}
      style=\tf
  ]
-
 % * Fonts
 % **  FontAwesome Glyphs and Symbols
  \definefontsynonym[FontAwesome][fontawesome]
@@ -112,6 +111,15 @@
      {\lower.2ex\hbox{\symbol[phone]} {\tf #2}  {\bf\cdot}  \lower.2ex\hbox{\symbol[email]} {\tf #3 }}
  }}
 
+\define[1]\NoContact{
+   {\ss\scd\bold\color[MidnightBlue]{#1}}
+   \blank
+   %\hairline
+   \hbox{
+    \framed[background=color, backgroundcolor=Periwinkle,frame=off,width=0.5\textwidth]{}
+ }}
+
+ 
 % **  Position 
 % Parameters: position, company, location, dates, link
  \define[5]\Position{%

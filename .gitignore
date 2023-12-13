@@ -2,3 +2,4 @@
 *.tuc
 *~
 
+.DS_Store
