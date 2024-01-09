@@ -1,0 +1,223 @@
+\environment ens_resume_v2
+
+\setuppagenumber[state=stop]
+\setupfootertexts[{}]
+\starttext
+% * Visual Debugging
+%% Debugging
+%\showsetups 
+%\showlayout
+%\showboxes
+%\showframe
+%\showgrid
+%% end of debugging
+
+%% * First Page Setup 
+\setuplayout[firstpage]
+% no header for the first page 
+\setupheader [state=stop]
+% * Resume Header 
+ \startcombination[2, distance=0.01\textwidth]
+   % contact
+   {\framed[width=0.6\textwidth,align=flushleft,frame=off]{% !important
+       \Contact
+	 {Evgeniy N. Sharapov}
+	 {(630) 779-3208}
+	 {\from[gmail]}
+   }}{}
+   % social
+   {\framed[width=0.39\textwidth, align=flushleft,
+       background=color, backgroundcolor=Periwinkle,frame=off,
+       backgroundcorner=round, backgroundradius=1ex,
+       offset=1ex]{\noindent
+       {\bf \from[linkedin]} \crlf
+       {\bf \from[github]} \crlf
+       {\bf \from[bitbucket]} \crlf
+       {\bf \from[stackoverflow]}}}{}
+ \stopcombination
+
+% * Profile
+\subject{Profile}
+Software Development Engineer with over 15 years of experience designing, implementing and supporting software solutions in various domains: finance, insurance, healthcare, energy, and automation. Extensive experience includes programming in  Java, JavaScript, Groovy, NodeJS, Python and other programming languages,  as well as work with Spring and Spring Boot, Quarkus, ME(AR)N ( Mongo Express React/Angular NodeJS), Docker, Kubernetes, Apache Camel, OSGi and other frameworks and tech stacks. Throughout my career I had to learn new environments, tools, libraries and perform roles ranging from Solution Architect to DevOps Engineer. Current areas of interest include micro-service and streaming data architectures, on-premise cloud and hybrid deployment models, domain specific languages.
+
+\startitemize
+  \item Delivered code and performed code review
+  \item Provided guidance and shared technical knowledge with junior developers, related to cloud technology, aspects of configuring CI/CD or choosing data structure/algorithm for implementation
+  \item Delivered technical design/documentation working as a mediator between developers and product owner
+  \item Lead teams of developers and QA engineers navigating between  DevOps routines and POC implementation to clarify technical requirements
+  \item Have prepared interviews strategies and conducted technical interviews with students on campus and with experienced professionals
+\stopitemize
+
+% * Technical Skills
+\subject{Technical Skills}
+\startitemize
+\item {\bf Programming:} Java, JavaScript/TypeScript, Groovy, Python, C\#/F\#, Clojure, Ruby, C/C++
+\item {\bf DevOps:} Linux Shell, Github Actions, Google Build, Gitlab CI/CD, Jenkins, Maven, Gradle, Git, Mercurial, Terraform
+\item {\bf Cloud}: Google Cloud (GCP), Amazon Web Services (AWS), Azure, OpenShift
+\item {\bf Virtualization:} AWS ECS, Docker, Kubernetes, VirtualBox
+\item {\bf Database:}  MySQL, Mongo, DynamoDB, Redis, MS SQL, Oracle, SQLite, Berkley DB.
+\item {\bf Technologies:} Spring and Spring Boot, Kafka, Quarkus, Liferay, Apache Camel, SOAP and REST APIs, OSGi, JBoss Drools, iBatis, Hibernate, JNI, Swing, SWT, Java 2D, RMI, EJB, JTA, JMS, JNDI, JDBC, JSP, Servlets, XML-RPC, XML, XSLT, XPath, JAX-RPC, WSDL4J, Axis, Hibernate, JBoss Drools, Websphere 5/6, JBoss AS, IBM Websphere Process Server, IBM BPM.
+\item {\bf Web:} React, AngularJS, Webpack, HTML5, CSS3, Less, SASS
+\stopitemize
+
+% * Certification
+\subject{Certification}
+\startitemize
+\item AWS Certified Cloud Practitioner (CLF-C01)
+\item Sun Certified Programmer for Java (CX-310-035) 
+\item Sun Certified Web Component Developer (CX-310-081)
+\stopitemize
+% * Education 
+\subject{Education}
+\startitemize
+\item M.Eng. 2007 Industrial Engineering, {\unhyphenated Lehigh University}
+\item B.Eng. 2004 Automated Control Systems, Perm State Technical University
+\stopitemize
+
+% * Books
+\subject{Books}
+{Instant Apache Camel Messaging System}, {\em Packt Publishing}, 2013, ISBN 9781782165347 
+
+
+% * All Other Pages Setup
+\page
+\setuppagenumber[state=start]
+\setupfootertexts[{\pagenumber\hspace[medium] of \the\numexpr\lastpage - 1}]
+\setuplayout[otherpages]
+% now let's show the header
+\setupheader[state=start]
+
+% * Experience
+\subject{Professional Experience}
+
+% ** CRIO
+\Employment{CRIO, Inc -- Remote}
+{Senior Software Development Engineer}
+{Oct 2022 -- Nov 2023}
+{crio}
+
+Work in an agile team developing world class platform for clinical research data management. Primary infrastructure is designed to be based on K8s and Google Cloud services. Work includes support of existing Java based applications and transitioning them onto a micro-services and Cloud first based architecture. 
+
+\startitemize
+\item Coding and development of the application in K8s cluster and in the GCP cloud.
+\item Design and architecture of the platform and its components.
+\item Technical support of services and applications  
+\item Contribution to code review and design sessions.
+\item Collaboration with product leadership and UX to understand the needs of the business  
+\item Organization of the testing and release process.
+\item {\bf Skills:} Google Cloud Platform; Kubernetes; Docker; Spring Boot; Java; NodeJS; Kafka; React; HTML5; jQuery; 
+\stopitemize
+
+% ** Audacious
+\EmploymentWithRoles{Audacious Inquiry -- Baltimore, MD}
+{audacious2}
+\Role{Lead Software Engineer}{Mar 2021 -- Sept 2022}
+Development, support and maintenance of PULSE (Patient Unified Lookup System for Emergencies) and Gateway (data exchange with National Network for Electronic Health Records exchange) platform. The platform is based on multiple applications and services deployed in AWS cloud and leveraging its functionality combined with responsive modern UI/UX, SSO and integration with National Network, third party services.
+
+\startitemize
+\item Hands-on code delivery
+\item Turning Product manager and product owner visions for the applications into a detailed technical documentation
+\item Architecture and design documentation and DevOps for cloud infrastructure and CI/CD 
+\item R\&D work, Proof-of-concept implementation and providing direction and support for the development 
+ team
+\item Integration and testing from QA to testing connectivity with third-party services (DataDog, Surescripts, eHealthExchange, etc)
+\item Responsible for Level 3 customer and applications support.
+\item {\bf Skills: } Node.js, Java, Spring Boot, .NET Framework, MySQL, Terraform, AWS (SQS, SNS, ECS, RDS, DynamoDB, Lambda, S3), Continuous Integration and Continuous Delivery (CI/CD), Fast Healthcare Interoperability Resources (FHIR), HL7 Standards, XML 
+\stopitemize
+\blank
+
+\Role{Senior Software Engineer}{Mar 2019 -- Mar 2021}
+Development and support of modular based application platform for connected healthcare - ULP (Unified Landing Page). This platform was leveraging Liferay OSGi and portlet architecture to bring highly customizable applications to the clients - HIEs, providers and payers, integrating it into their software stack as well as provide best user experience and integration via SSO.
+
+\startitemize
+\item Hands on code delivery and code review for code in the back-end 
+\item R\& D and delivery of design documents for new features, in particular, leveraging portlets and OSGi architecture. 
+\item Quality tests and Improvements in CI/CD process and transition from on on-premise type deployment to a cloud (AWS) deployment. 
+\item Support and troubleshooting of the issues submitted by the customers and internal users
+\item {\bf Skills:} Java, Spring Boot, Liferay, OSGi, Shell Scripting, Docker, Node.js,MySQL, JavaScript, HTML5, CSS
+\stopitemize
+
+% ** Avanade 
+\Employment{Avanade (Infusion before 2017)  --  Raleigh, NC}
+{Senior Consultant}
+{Aug 2014 -- Mar 2019}
+{avanade}
+
+Design, documentation, hands-on code development and code review. Major project metadata driven, highly configurable platform  for all aspect of life insurance underwriting for Metlife subsidiary in Japan (Alico). Worked directly on the SWAT Applications Team - small team of talented developers that reports directly to the CIO for Rapid Application Development.
+
+Helped to augment recruitment processes in MetLife for growth and promotion of tech culture across the organization, conducting over 100 technical interviews with developers  to senior technical architects and leads.
+
+\startitemize
+\item Implementation and maintenance of the configuration application (Composer) using Node.Js, AngularJS, React and Mongo
+\item Design and architecture of the back-end utilizing reactive streams (Reactor) to achieve better performance and scalability.
+\item Design and implementation of application Groovy scripting, testing frameworks, loading and data migration tools.
+\item Management of development and CI process through  JIRA, Jenkins, Docker, Stash, VSTS
+\item Education and training of engineering teams; technical interviewing of candidates for Metlife and Infusion and recruitment on campus (UNC).
+\item {\bf Skills:} Mongo; Java; Spring, Reactor, Groovy; JavaScript; NodeJS; Docker; Shell Scripts; AngularJS; React; HTML5; Less; JIRA
+\stopitemize
+
+% ** StoneRiver 
+\Employment{Stone River, Inc -- Orlando, FL}
+{Senior Software Development Engineer}
+{Apr 2013 -- Aug 2014}
+{stoneriver}
+Supported and developed a software product for mid-size workers comp insurance companies. Performed front-end and back-end development, customer support, testing and release using automation tools.
+
+{\bf Tech:} Websphere AS 7; JBoss 5, 6; Wildfly 8; AS/400; MS SQL Server; Java; Hibernate 3.5;  Python; HTML5; JavaScript;
+
+% ** Click2Interact
+\Employment{Click2Interact -- Orlando, FL}
+{Developer}
+{Sep 2012 -- Jan 2013}
+{click}
+Designed and implemented teacher-parent communication application for child development centers and pre-schools. Full-stack development using Ruby on Rails framework, JavaScript and Clojure.
+
+{\bf Tech:} Ruby On Rails 3.2, MySQL, RESTful Web-Services, Rackspace Cloud, jQuery, Twitter Bootstrap,
+
+% ** Prognoz
+\Employment{Prognoz -- Perm Russia}
+{Software Engineer}
+{Mar 2012 -- Jul 2012}
+{prognoz}
+Wrote code for an 'Electronic Government' platform based on IBM BPM and end-user web-application using GWT. Full-stack development with a strong focus on REST web-services and development for BPM.
+
+{\bf Tech:} Java 1.6, GWT, JPA 2, Web-Services, IBM Websphere Process Server and IBM BPM 8
+
+% ** Marlabs
+\Employment{Marlabs -- Orlando, FL}
+{Consultant/Programmer Analyst}
+{Mar 2007 -- Dec 2011}
+{marlabs}
+Worked as a consultant on multiple projects at Siemens Shared Services (division of Siemens) developing custom vendor management application, documents management application, FileNet migration tools, scan and recognize application, application for customs compliance control; and at Team Disney, where I was involved in the project refactoring and improving existing system for bookings and reservations.
+
+{\bf Tech:} Java, RAD 7.5, Eclipse, Spring 2.5, Drools, SQL Server 2000/2005, Oracle 10g, WebSphere 5/6, JBoss AS, EJB, Apache Axis, Apache Camel, Apache iBatis, JavaScript, jQuery, CSS, HTML, XML/XSLT, JSF, Struts, Ant, ClearCase, Subversion, AIX, Shell/AWK/Sed scripting, Perl, Python, soapUI
+
+% ** Fermilab 
+\Employment{Fermi National Accelerator Lab -- Batavia, IL}
+{Engineer, Research Assistant}
+{2001, 2002, 2004, 2005}
+{fermilab}
+Multiple internships, then engineer level position at the high-energy physics project in National Lab. Design and implemented tools and applications used for data acquisition and hardware control as part of international collaboration for Large Hadron Collider (LHC) experiment (United States team worked on the Compact Muon Solenoid  (CMS) part - building alignment system for muon detector).
+
+{\bf Tech:} Java 1.4, C/C++, ROOT, Swing, HSQL, Hibernate, XML-RPC, Python, Shell scripting
+
+% ** InfoTelecom
+\Employment{InfoTelecom LLC -- Perm, Russia}
+{Software Developer}
+{Oct 2003 -- Jul 2004}
+{infotelecom}
+Developed product software product - highly customizable system of web-traffic statistics and monitoring with charts, graphs and diagrams dashboard, custom made website templating and FTP based deployment. Wrote code for Oracle SPs using PL/SQL and Java.
+
+{\bf Tech:}  Java 1.4, Java 2D, ImageIO, Oracle AS, Oracle 11g, PL/SQL, Shell Scripting, JavaScript
+
+% ** iTech Software
+\Employment{iTech Software -- Perm, Russia}
+{Software Developer}
+{Oct 2002 -- Sep 2003}
+{itech}
+Developed software for telecommunication company managing payphones. Wrote high-level and low-level code using C and Java. Developed custom network protocol. 
+
+{\bf Tech:}  Java 1.3, JNI, C/C++, JSP, JDBC, MS IIS, Interbase
+
+
+\stoptext
